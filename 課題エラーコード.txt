@@ -1,0 +1,104 @@
+PS C:\pleiades\2023-12\spring_boot\samuraitravel> heroku logs --tail
+2025-10-13T07:05:07.326142+00:00 app[web.1]: at org.springframework.boot.autoconfigure.condition.AbstractNestedCondition$MemberOutcomes.<init>(AbstractNestedCondition.java:189) ~[spring-boot-autoconfigure-3.5.6.jar!/:3.5.6]
+2025-10-13T07:05:07.326142+00:00 app[web.1]: at org.springframework.boot.autoconfigure.condition.AbstractNestedCondition$MemberConditions.lambda$getMatchOutcomes$0(AbstractNestedCondition.java:169) ~[spring-boot-autoconfigure-3.5.6.jar!/:3.5.6]
+2025-10-13T07:05:07.326142+00:00 app[web.1]: at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:721) ~[na:na]
+2025-10-13T07:05:07.326143+00:00 app[web.1]: at org.springframework.util.MultiValueMapAdapter.forEach(MultiValueMapAdapter.java:179) ~[spring-core-6.2.11.jar!/:6.2.11]
+2025-10-13T07:05:07.326143+00:00 app[web.1]: at java.base/java.util.Collections$UnmodifiableMap.forEach(Collections.java:1554) ~[na:na]
+2025-10-13T07:05:07.326147+00:00 app[web.1]: at org.springframework.boot.autoconfigure.condition.AbstractNestedCondition$MemberConditions.getMatchOutcomes(AbstractNestedCondition.java:169) ~[spring-boot-autoconfigure-3.5.6.jar!/:3.5.6]
+2025-10-13T07:05:07.326147+00:00 app[web.1]: at org.springframework.boot.autoconfigure.condition.AbstractNestedCondition$MemberMatchOutcomes.<init>(AbstractNestedCondition.java:78) ~[spring-boot-autoconfigure-3.5.6.jar!/:3.5.6]
+2025-10-13T07:05:07.326147+00:00 app[web.1]: at org.springframework.boot.autoconfigure.condition.AbstractNestedCondition.getMatchOutcome(AbstractNestedCondition.java:63) ~[spring-boot-autoconfigure-3.5.6.jar!/:3.5.6]
+2025-10-13T07:05:07.326147+00:00 app[web.1]: at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:47) ~[spring-boot-autoconfigure-3.5.6.jar!/:3.5.6]
+2025-10-13T07:05:07.326148+00:00 app[web.1]: ... 28 common frames omitted
+2025-10-13T07:05:07.326148+00:00 app[web.1]:
+2025-10-13T07:05:07.386637+00:00 heroku[web.1]: Process exited with status 1
+2025-10-13T07:05:07.406347+00:00 heroku[web.1]: State changed from starting to crashed
+2025-10-13T07:10:47.000000+00:00 app[api]: Build started by user uco0313@gmail.com
+2025-10-13T07:11:12.535472+00:00 heroku[web.1]: State changed from crashed to starting
+2025-10-13T07:11:19.500178+00:00 heroku[web.1]: Starting process with command `java -Dserver.port=28164 $JAVA_OPTS -jar -Dspring.profiles.active=production target/*.jar`
+2025-10-13T07:11:20.179020+00:00 app[web.1]: Setting JAVA_TOOL_OPTIONS defaults based on dyno size. Custom settings will override them.
+2025-10-13T07:11:20.181518+00:00 app[web.1]: Picked up JAVA_TOOL_OPTIONS: -Dfile.encoding=UTF-8 -XX:MaxRAM=536870912 -Xmx300m -Xss512k -XX:CICompilerCount=2
+2025-10-13T07:11:20.971291+00:00 app[web.1]:
+2025-10-13T07:11:20.971313+00:00 app[web.1]: .   ____          _            __ _ _
+2025-10-13T07:11:20.971314+00:00 app[web.1]: /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+2025-10-13T07:11:20.971314+00:00 app[web.1]: ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+2025-10-13T07:11:20.971314+00:00 app[web.1]: \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+2025-10-13T07:11:20.971314+00:00 app[web.1]: '  |____| .__|_| |_|_| |_\__, | / / / /
+2025-10-13T07:11:20.971315+00:00 app[web.1]: =========|_|==============|___/=/_/_/_/
+2025-10-13T07:11:20.971315+00:00 app[web.1]:
+2025-10-13T07:11:20.971647+00:00 app[web.1]: :: Spring Boot ::                (v3.5.6)
+2025-10-13T07:11:20.971651+00:00 app[web.1]:
+2025-10-13T07:11:21.064196+00:00 app[web.1]: 2025-10-13T07:11:21.062Z  INFO 2 --- [           main] c.e.s.SamuraitravelApplication           : Starting SamuraitravelApplication v0.0.1-SNAPSHOT using Java 17.0.16 with PID 2 (/app/target/samuraitravel-0.0.1-SNAPSHOT.jar started by u35312 in /app)
+2025-10-13T07:11:21.064954+00:00 app[web.1]: 2025-10-13T07:11:21.064Z  INFO 2 --- [           main] c.e.s.SamuraitravelApplication           : The following 1 profile is active: "production"
+2025-10-13T07:11:21.672134+00:00 app[web.1]: 2025-10-13T07:11:21.671Z  WARN 2 --- [           main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [com.example.samuraitravel.SamuraitravelApplication]: Error processing condition on org.springframework.boot.autoconfigure.mail.MailSenderAutoConfiguration
+2025-10-13T07:11:21.678124+00:00 app[web.1]: 2025-10-13T07:11:21.677Z  INFO 2 --- [           main] .s.b.a.l.ConditionEvaluationReportLogger :
+2025-10-13T07:11:21.678126+00:00 app[web.1]:
+2025-10-13T07:11:21.678131+00:00 app[web.1]: Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-10-13T07:11:21.700157+00:00 app[web.1]: 2025-10-13T07:11:21.697Z ERROR 2 --- [           main] o.s.boot.SpringApplication               : Application run failed
+2025-10-13T07:11:21.700159+00:00 app[web.1]:
+2025-10-13T07:11:21.700164+00:00 app[web.1]: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [com.example.samuraitravel.SamuraitravelApplication]: Error processing condition on org.springframework.boot.autoconfigure.mail.MailSenderAutoConfiguration
+2025-10-13T07:11:21.700164+00:00 app[web.1]: at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:627) ~[spring-context-6.2.11.jar!/:6.2.11]
+2025-10-13T07:11:21.700166+00:00 app[web.1]: at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.lambda$processGroupImports$1(ConfigurationClassParser.java:850) ~[spring-context-6.2.11.jar!/:6.2.11]
+2025-10-13T07:11:21.700176+00:00 app[web.1]: at java.base/java.lang.Iterable.forEach(Iterable.java:75) ~[na:na]
+2025-10-13T07:11:21.700176+00:00 app[web.1]: at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.processGroupImports(ConfigurationClassParser.java:847) ~[spring-context-6.2.11.jar!/:6.2.11]
+2025-10-13T07:11:21.700177+00:00 app[web.1]: at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorHandler.process(ConfigurationClassParser.java:817) ~[spring-context-6.2.11.jar!/:6.2.11]
+2025-10-13T07:11:21.700177+00:00 app[web.1]: at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:198) ~[spring-context-6.2.11.jar!/:6.2.11]
+2025-10-13T07:11:21.700177+00:00 app[web.1]: at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:418) ~[spring-context-6.2.11.jar!/:6.2.11]
+2025-10-13T07:11:21.700178+00:00 app[web.1]: at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:290) ~[spring-context-6.2.11.jar!/:6.2.11]
+2025-10-13T07:11:21.700178+00:00 app[web.1]: at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:349) ~[spring-context-6.2.11.jar!/:6.2.11]
+2025-10-13T07:11:21.700178+00:00 app[web.1]: at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:118) ~[spring-context-6.2.11.jar!/:6.2.11]
+2025-10-13T07:11:21.700179+00:00 app[web.1]: at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:791) ~[spring-context-6.2.11.jar!/:6.2.11]
+2025-10-13T07:11:21.700179+00:00 app[web.1]: at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:609) ~[spring-context-6.2.11.jar!/:6.2.11]
+2025-10-13T07:11:21.700180+00:00 app[web.1]: at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.5.6.jar!/:3.5.6]
+2025-10-13T07:11:21.700180+00:00 app[web.1]: at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.5.6.jar!/:3.5.6]
+2025-10-13T07:11:21.700180+00:00 app[web.1]: at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.5.6.jar!/:3.5.6]
+2025-10-13T07:11:21.700181+00:00 app[web.1]: at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.5.6.jar!/:3.5.6]
+2025-10-13T07:11:21.700181+00:00 app[web.1]: at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.5.6.jar!/:3.5.6]
+2025-10-13T07:11:21.700181+00:00 app[web.1]: at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.5.6.jar!/:3.5.6]
+2025-10-13T07:11:21.700181+00:00 app[web.1]: at com.example.samuraitravel.SamuraitravelApplication.main(SamuraitravelApplication.java:10) ~[!/:0.0.1-SNAPSHOT]
+2025-10-13T07:11:21.700182+00:00 app[web.1]: at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+2025-10-13T07:11:21.700183+00:00 app[web.1]: at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+2025-10-13T07:11:21.700183+00:00 app[web.1]: at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+2025-10-13T07:11:21.700183+00:00 app[web.1]: at java.base/java.lang.reflect.Method.invoke(Method.java:569) ~[na:na]
+2025-10-13T07:11:21.700184+00:00 app[web.1]: at org.springframework.boot.loader.launch.Launcher.launch(Launcher.java:102) ~[samuraitravel-0.0.1-SNAPSHOT.jar:0.0.1-SNAPSHOT]
+2025-10-13T07:11:21.700184+00:00 app[web.1]: at org.springframework.boot.loader.launch.Launcher.launch(Launcher.java:64) ~[samuraitravel-0.0.1-SNAPSHOT.jar:0.0.1-SNAPSHOT]
+2025-10-13T07:11:21.700184+00:00 app[web.1]: at org.springframework.boot.loader.launch.JarLauncher.main(JarLauncher.java:40) ~[samuraitravel-0.0.1-SNAPSHOT.jar:0.0.1-SNAPSHOT]
+2025-10-13T07:11:21.700188+00:00 app[web.1]: Caused by: java.lang.IllegalStateException: Error processing condition on org.springframework.boot.autoconfigure.mail.MailSenderAutoConfiguration
+2025-10-13T07:11:21.700188+00:00 app[web.1]: at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:60) ~[spring-boot-autoconfigure-3.5.6.jar!/:3.5.6]
+2025-10-13T07:11:21.700188+00:00 app[web.1]: at org.springframework.context.annotation.ConditionEvaluator.shouldSkip(ConditionEvaluator.java:99) ~[spring-context-6.2.11.jar!/:6.2.11]
+2025-10-13T07:11:21.700188+00:00 app[web.1]: at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:247) ~[spring-context-6.2.11.jar!/:6.2.11]
+2025-10-13T07:11:21.700189+00:00 app[web.1]: at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:617) ~[spring-context-6.2.11.jar!/:6.2.11]
+2025-10-13T07:11:21.700189+00:00 app[web.1]: ... 25 common frames omitted
+2025-10-13T07:11:21.700190+00:00 app[web.1]: Caused by: org.springframework.util.PlaceholderResolutionException: Could not resolve placeholder 'MAILGUN_SMTP_SERVER' in value "${MAILGUN_SMTP_SERVER}"
+2025-10-13T07:11:21.700190+00:00 app[web.1]: at org.springframework.util.PlaceholderResolutionException.withValue(PlaceholderResolutionException.java:81) ~[spring-core-6.2.11.jar!/:6.2.11]
+2025-10-13T07:11:21.700190+00:00 app[web.1]: at org.springframework.util.PlaceholderParser$ParsedValue.resolve(PlaceholderParser.java:423) ~[spring-core-6.2.11.jar!/:6.2.11]
+2025-10-13T07:11:21.700190+00:00 app[web.1]: at org.springframework.util.PlaceholderParser.replacePlaceholders(PlaceholderParser.java:128) ~[spring-core-6.2.11.jar!/:6.2.11]
+2025-10-13T07:11:21.700191+00:00 app[web.1]: at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:118) ~[spring-core-6.2.11.jar!/:6.2.11]
+2025-10-13T07:11:21.700191+00:00 app[web.1]: at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:114) ~[spring-core-6.2.11.jar!/:6.2.11]
+2025-10-13T07:11:21.700191+00:00 app[web.1]: at org.springframework.core.env.AbstractPropertyResolver.doResolvePlaceholders(AbstractPropertyResolver.java:293) ~[spring-core-6.2.11.jar!/:6.2.11]
+2025-10-13T07:11:21.700191+00:00 app[web.1]: at org.springframework.core.env.AbstractPropertyResolver.resolveRequiredPlaceholders(AbstractPropertyResolver.java:264) ~[spring-core-6.2.11.jar!/:6.2.11]
+2025-10-13T07:11:21.700191+00:00 app[web.1]: at org.springframework.core.env.AbstractPropertyResolver.resolveNestedPlaceholders(AbstractPropertyResolver.java:284) ~[spring-core-6.2.11.jar!/:6.2.11]
+2025-10-13T07:11:21.700191+00:00 app[web.1]: at org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertyResolver.getProperty(ConfigurationPropertySourcesPropertyResolver.java:81) ~[spring-boot-3.5.6.jar!/:3.5.6]
+2025-10-13T07:11:21.700200+00:00 app[web.1]: at org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertyResolver.getProperty(ConfigurationPropertySourcesPropertyResolver.java:62) ~[spring-boot-3.5.6.jar!/:3.5.6]
+2025-10-13T07:11:21.700200+00:00 app[web.1]: at org.springframework.core.env.AbstractEnvironment.getProperty(AbstractEnvironment.java:555) ~[spring-core-6.2.11.jar!/:6.2.11]
+2025-10-13T07:11:21.700200+00:00 app[web.1]: at org.springframework.boot.autoconfigure.condition.OnPropertyCondition$Spec.collectProperties(OnPropertyCondition.java:160) ~[spring-boot-autoconfigure-3.5.6.jar!/:3.5.6]
+2025-10-13T07:11:21.700200+00:00 app[web.1]: at org.springframework.boot.autoconfigure.condition.OnPropertyCondition.determineOutcome(OnPropertyCondition.java:102) ~[spring-boot-autoconfigure-3.5.6.jar!/:3.5.6]
+2025-10-13T07:11:21.700201+00:00 app[web.1]: at org.springframework.boot.autoconfigure.condition.OnPropertyCondition.getMatchOutcome(OnPropertyCondition.java:60) ~[spring-boot-autoconfigure-3.5.6.jar!/:3.5.6]
+2025-10-13T07:11:21.700201+00:00 app[web.1]: at org.springframework.boot.autoconfigure.condition.AbstractNestedCondition$MemberOutcomes.getConditionOutcome(AbstractNestedCondition.java:195) ~[spring-boot-autoconfigure-3.5.6.jar!/:3.5.6]
+2025-10-13T07:11:21.700201+00:00 app[web.1]: at org.springframework.boot.autoconfigure.condition.AbstractNestedCondition$MemberOutcomes.<init>(AbstractNestedCondition.java:189) ~[spring-boot-autoconfigure-3.5.6.jar!/:3.5.6]
+2025-10-13T07:11:21.700201+00:00 app[web.1]: at org.springframework.boot.autoconfigure.condition.AbstractNestedCondition$MemberConditions.lambda$getMatchOutcomes$0(AbstractNestedCondition.java:169) ~[spring-boot-autoconfigure-3.5.6.jar!/:3.5.6]
+2025-10-13T07:11:21.700202+00:00 app[web.1]: at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:721) ~[na:na]
+2025-10-13T07:11:21.700202+00:00 app[web.1]: at org.springframework.util.MultiValueMapAdapter.forEach(MultiValueMapAdapter.java:179) ~[spring-core-6.2.11.jar!/:6.2.11]
+2025-10-13T07:11:21.700202+00:00 app[web.1]: at java.base/java.util.Collections$UnmodifiableMap.forEach(Collections.java:1554) ~[na:na]
+2025-10-13T07:11:21.700205+00:00 app[web.1]: at org.springframework.boot.autoconfigure.condition.AbstractNestedCondition$MemberConditions.getMatchOutcomes(AbstractNestedCondition.java:169) ~[spring-boot-autoconfigure-3.5.6.jar!/:3.5.6]
+2025-10-13T07:11:21.700206+00:00 app[web.1]: at org.springframework.boot.autoconfigure.condition.AbstractNestedCondition$MemberMatchOutcomes.<init>(AbstractNestedCondition.java:78) ~[spring-boot-autoconfigure-3.5.6.jar!/:3.5.6]
+2025-10-13T07:11:21.700206+00:00 app[web.1]: at org.springframework.boot.autoconfigure.condition.AbstractNestedCondition.getMatchOutcome(AbstractNestedCondition.java:63) ~[spring-boot-autoconfigure-3.5.6.jar!/:3.5.6]
+2025-10-13T07:11:21.700206+00:00 app[web.1]: at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:47) ~[spring-boot-autoconfigure-3.5.6.jar!/:3.5.6]
+2025-10-13T07:11:21.700206+00:00 app[web.1]: ... 28 common frames omitted
+2025-10-13T07:11:21.700206+00:00 app[web.1]:
+2025-10-13T07:11:21.804594+00:00 heroku[web.1]: Process exited with status 1
+2025-10-13T07:11:21.826407+00:00 heroku[web.1]: State changed from starting to crashed
+2025-10-13T07:11:44.807050+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=samurai-travel-uco-45b5b6df0821.herokuapp.com request_id=2349875d-35d3-0068-63f5-3547634cf78e fwd="" dyno= connect=0ms service=0ms status=503 bytes=567 protocol=http1.1 tls=true tls_version=unknown
+2025-10-13T07:11:49.226626+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=samurai-travel-uco-45b5b6df0821.herokuapp.com request_id=2a44c291-2c7b-fc4e-b9c2-95cc984d619e fwd="" dyno= connect=0ms service=0ms status=503 bytes=567 protocol=http1.1 tls=true tls_version=unknown
+2025-10-13T07:11:12.191179+00:00 app[api]: Deploy 41188c8c by user uco0313@gmail.com
+2025-10-13T07:11:12.191179+00:00 app[api]: Release v15 created by user uco0313@gmail.com
+2025-10-13T07:11:20.000000+00:00 app[api]: Build succeeded
