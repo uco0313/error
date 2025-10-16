@@ -30,7 +30,8 @@ import com.example.samuraitravel.service.ReviewService;
 @Controller
 @RequestMapping("/houses")
 public class HouseController {
-	private final HouseRepository houseRepository;
+    /* 修正内容ここから */
+    private final HouseRepository houseRepository;
     private final ReviewService reviewService; // ★要件1: ReviewServiceの依存性注入
     private final FavoriteService favoriteService;  
     private final HouseService houseService;  
@@ -42,6 +43,7 @@ public class HouseController {
         this.favoriteService = favoriteService;
         this.houseRepository = houseRepository;
     }
+/* 修正内容ここまで */
     
     @GetMapping
     public String index(@RequestParam(name = "keyword", required = false) String keyword,
