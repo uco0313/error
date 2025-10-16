@@ -30,15 +30,17 @@ import com.example.samuraitravel.service.ReviewService;
 @Controller
 @RequestMapping("/houses")
 public class HouseController {
-    private final HouseRepository houseRepository;
+	private final HouseRepository houseRepository;
     private final ReviewService reviewService; // ★要件1: ReviewServiceの依存性注入
     private final FavoriteService favoriteService;  
+    private final HouseService houseService;  
 
     
-    public HouseController(HouseService houseService, ReviewService reviewService, FavoriteService favoriteService) {
+    public HouseController(HouseRepository houseRepository,HouseService houseService, ReviewService reviewService, FavoriteService favoriteService) {
         this.houseService = houseService;
         this.reviewService = reviewService;
         this.favoriteService = favoriteService;
+        this.houseRepository = houseRepository;
     }
     
     @GetMapping
